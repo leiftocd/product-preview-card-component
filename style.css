@@ -1,0 +1,228 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-fraunces: 'Fraunces', serif;
+
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    --Font-size-paragraph: 14px;
+
+    --width-desktop: 1440px;
+    --width-mobile: 375px;
+}
+
+html{
+    font-family: var(--font-montserrat);
+}
+
+body{
+    background-color: var(--Cream);
+    width: var(--width-desktop);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+
+}
+main{
+    width: 600px;
+    max-width: 50% ;
+    background-color: var(--White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 10px;
+
+}
+
+img{
+    display: flex;
+    width: 300px;
+    height: 100%;
+    border-radius: 10px;
+}
+.imgMobile{
+    display: none;
+}
+.content{
+    width: 50%;
+    height: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 20px;
+}
+
+.content > span{
+    width: 100%;
+    display: flex;
+    font-size: var(--Font-size-paragraph);
+    font-weight: 500;
+    color: var(--Dark-grayish-blue);
+    letter-spacing: 3px;
+}
+h1{
+    width: 100%;
+    color: var(--Very-dark-blue);
+}
+p{
+    width: 100%;
+    font-size: var(--Font-size-paragraph);
+    color: var(--Dark-grayish-blue);
+}
+
+.price{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+h2{
+    width: 100%;
+    color: var(--Dark-cyan);
+    font-size: 25px;
+    font-weight: 700;
+}
+.price > span{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: line-through;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--Dark-grayish-blue);
+}
+
+h1,
+h2{
+    font-family: var(--font-fraunces);
+}
+.btn{
+     width: 100%;
+}
+.btn img{
+    width: 16px;
+    height: 16px;
+
+}
+button{
+    width: 100%;
+    height: 40px;
+    background-color: var(--Dark-cyan);
+    font-size: var(--Font-size-paragraph);
+    font-weight: 700;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    color: var(--White);
+    gap: 10px;
+}
+button:hover
+{
+     background-color: hsl(159, 94%, 18%);
+}
+
+@media screen and (max-width: 375px) {
+    body{
+        width: 100vw;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    main{
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        /* margin-top: 20px; */
+    }
+    .imgMobile{
+        display: block;
+        width: 100%;
+        height: 30%;
+        border-radius: 0px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    .imgDesktop{
+        display: none;
+    }
+
+    .content{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 15px;
+    }
+    .content > span{
+        width: 100%;
+        font-size: 12px;
+    }
+    h1{
+        padding: 0;
+        width: 100%;
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    p{
+        width: 100%;
+        line-height: 1.5;
+    }
+
+    .price{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+    h2{
+        width: 100%;
+        font-size: 30px;
+    }
+    .btn{
+        width: 100%;
+        margin-bottom: 25px;
+
+        }
+    button{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 15px
+        }
+}
+/* @media  screen 
+and (max-device-width: 1440px) 
+and (min-device-width: 375px){}; */
